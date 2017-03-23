@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    --main-color: #127ed1;
+    --gray: #4a4745;
+}
+body {
+    background: #ececec;
+    font-family: avenir;
+    margin: 0;
+}
+nav {
+    background: var(--main-color);
+    box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.in-game-new {
+    bottom: 0;
+    text-align: center;
+}
+nav button {
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid var(--gray);
+    color: #fff;
+    font-size: 1rem;
+    transition: all .3s;
+}
+nav button:hover,
+nav button:active,
+nav button:focus {
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+    outline: 0;
+}
+.in-game-new button {
+    background-color: transparent;
+    border: 5px solid var(--gray);
+    color: var(--gray);
+    margin: 2rem;
+    outline: 0;
+    padding: 1rem;
+}
+.in-game-new button:hover {
+    background: var(--gray);
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+}
+.scene {
+    color: #4a4745;
+    display: none;
+    font-family: 'Carter One', 'avenir', 'sans serif';
+    font-size: 7rem;
+    padding: 100px 3rem 0 3rem;
+    text-align: center;
+}
+.scene.in {
+    display: block;
+}
+.answer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/*WE NEED MORE STYLES HERE!!*/
+
+
+@media screen and (max-width: 500px) {
+    .in-game-new {
+        padding: 1rem;
+    }
+    .in-game-new button {
+        margin: 1rem;
+    }
+    .scene {
+        font-size: 4rem;
+    }
+    .question-wrapper p {
+        padding: 5rem;
+    }
+    .answer-list {
+        margin-top: 1rem;
+    }
+    .answer-list fieldset {
+        width: 80%;
+    }
+    .answer-list button {
+        padding: .5rem 1rem;
+    }
+    .answer-list .submit-wrapper {
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .question-wrapper p {
+        padding: 3rem;
+    }
+}
